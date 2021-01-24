@@ -1,0 +1,440 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  font-size: 6px;
+}
+
+body {
+  background-color: #fff;
+  font-family:'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+
+/*nav*/
+nav {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+}
+
+.logo {
+  float: left;
+  margin-top: .8rem;
+}
+
+.menu-items {
+  float: right;
+}
+
+.logo img {
+  width: 20rem;
+}
+
+.menu-items li {
+  margin-top: 2.5rem;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-item a {
+  color: #DEC25B;
+  font-size: 2.1rem;
+  padding-left: 2.0rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  opacity: 0.7;
+  padding: .4rem;
+  transition: opacity 0.4s;
+  letter-spacing: .2rem;
+}
+
+.menu-item a:hover {
+  opacity: 1;
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .menu-items {
+    float: none;
+    text-align: left;
+  }
+
+  .logo {
+    float: none;
+  }
+
+  .menu-item {
+    display: block;
+    font-size: 2rem;
+    padding-left: 0;
+  }
+
+  .nav-icon {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 2.5rem;
+  }
+
+  .menu-items.responsive li:not(:first-child) {
+    display: none;
+  }
+}
+
+/*header*/
+header {
+  background-image: url(main.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 8.0rem;
+  padding-top: 15rem;
+  padding-bottom: 10.5rem;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 6.0rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white
+}
+
+.main-button {
+  max-width: 18rem;
+  border: 2px solid white;
+  height: 8rem;
+  opacity: 0.7;
+  color: white;
+  margin: auto;
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 2.0rem;
+  transition: all 0.5s;
+  margin-bottom: 2.1rem;
+}
+
+.main-button:hover {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.main-button p {
+  padding-top: 2.3rem;
+}
+
+.line {
+  border: none;
+  border-top: .2rem solid white;
+  max-width: 30rem;
+  margin: 2.5rem auto;
+  margin-bottom: 1.5rem;
+}
+
+.quote {
+  max-width: 46rem;
+  height: auto;
+  padding: .2rem;
+  margin: 1.0rem auto;
+  text-align: center;
+}
+
+header h2 {
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* About */
+#About {
+  padding-top: 10rem;
+  text-align: center;
+  padding-bottom: 10.5rem;
+}
+
+#About h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#about_p {
+  width: 60%;
+  margin: 0 auto;
+  padding: 2.0rem;
+  padding-bottom: 0;
+  font-size: 1.7rem;
+}
+
+.about-holmes {
+  max-width: 30rem;
+}
+
+/*Images*/
+#images {
+  padding-top: 10rem;
+  padding-bottom: 10.5 rem;
+  text-align: center;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  padding: 1rem;
+}
+
+#images h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#image-main {
+  margin-top: 10rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image img {
+  display: block;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #DEC25B;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.img-overlay .icon {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image:hover .img-overlay {
+  opacity: 0.9;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Contact*/
+#contact {
+  padding-top: 10rem;
+  text-align: center;
+  padding-bottom: 10.5rem;
+}
+
+#contact h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form {
+  margin: 3rem auto;
+  width: 70%;
+}
+
+.contact-form input {
+  width: 100%;
+  font-size: 2.5rem;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-part {
+  margin-bottom: 4rem;
+}
+
+.contact-form textarea {
+  width: 100%;
+  font-size: 1.8rem;
+  resize: none;
+  padding: 1rem;
+}
+
+.contact-btn {
+  background-color: white;
+  max-width: 14rem;
+  border: 2px solid #D8C883;
+  color: black;
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 2.0rem;
+  transition: all 0.5s;
+  margin-bottom: 2.1rem;
+  font-weight: 700;
+  opacity: 0.7;
+  float: left;
+  display: block;
+  padding: 1.7rem 2.0rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*Footer*/
+footer {
+  padding-top: 5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+footer li {
+  display: inline-block;
+}
+
+.icon {
+  color: white;
+  font-size: 5rem;
+  margin: 0.5rem;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+.icon:hover {
+  opacity: 1
+}
+
+/*Responsive*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  html {
+    font-size: 8px;
+  }
+
+  .col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  html {
+    font-size: 9px;
+  }
+
+  .col {
+    width: 33.3333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  .col {
+    width: 33.3333%;
+  }
+}
+
+/* History */
+#history {
+  padding-top: 10rem;
+  text-align: center;
+  padding-bottom: 10.5rem;
+}
+
+.history-img {
+  width: 20%;
+  float: right;
+  padding-top: 5rem;
+  margin: 1rem;
+}
+
+#history h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#history p {
+  text-align: left;
+}
+
+.history-main {
+  max-width: 90%;
+  margin: 0rem auto;
+}
